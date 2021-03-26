@@ -1,2 +1,0 @@
-// Fontの読み込み
-!function(e){var t,a={kitId:"uvl5unm",scriptTimeout:3e3,async:!0},c=e.documentElement,n=setTimeout(function(){c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},a.scriptTimeout),i=e.createElement("script"),s=!1,o=e.getElementsByTagName("script")[0];c.className+=" wf-loading",i.src="https://use.typekit.net/"+a.kitId+".js",i.async=!0,i.onload=i.onreadystatechange=function(){if(t=this.readyState,!(s||t&&"complete"!=t&&"loaded"!=t)){s=!0,clearTimeout(n);try{Typekit.load(a)}catch(e){}}},o.parentNode.insertBefore(i,o)}(document);
