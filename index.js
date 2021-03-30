@@ -4,7 +4,8 @@ var theme = "light";
 $(function () {
     function theme_change(dark) {
         if (dark) {
-            $("body").css("--theme-color-text", "#fff")
+            $(":root").css("--theme-color", "#2C2F33")
+                .css("--theme-color-text", "#fff")
                 .css("--theme-color-t50", "#00000080");
             theme = "dark";
         };
@@ -25,7 +26,7 @@ $(function () {
     bubbly({
         blur: 15,
         bubbleFunc: () => `hsla(${Math.random() * 360},100%,50%,${Math.random() * 0.3})`,
-        bubbles: Math.floor($("body").width() * $("body").height() / 7500),
+        bubbles: Math.floor($(window).width() * $(window).height() / 7500),
         canvas: document.querySelector("#top-background"),
         colorStart: color[0],
         colorStop: color[1],
@@ -64,7 +65,23 @@ function typing(text, element, erase = false, func = []) {
 $(function () {
     $(".top-text img").fadeIn("slow", function () {
         typing("Takkun053", ".top-text h1", true, [
-            function () { typing("ようこそ猫耳が生えた学生プログラマーのポートフォリオへ！", ".top-text p"); }
+            function () { typing("ようこそ、猫耳が生えた学生プログラマーのポートフォリオへ！", ".top-text p"); }
         ]);
+    });
+});
+
+$(function () {
+    $("html, body").animate({ scrollTop: 0 }, 0);
+    $("body").mousewheel(function (event) {
+        console.log(event.deltaX, event.deltaY, event.deltaFactor, $(window).scrollTop())
+        if (Math.round($(window).height()) == Math.round($(".content").offset().top) && event.deltaY < 0) {
+            $(".content").animate({
+                "margin-top": "-100vh"
+            }, "slow", "swing");
+        } else if ($(".content").offset().top == 0 && event.deltaY > 0) {
+            $(".content").animate({
+                "margin-top": "0"
+            }, "slow", "swing");
+        };
     });
 });
