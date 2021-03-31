@@ -1,12 +1,13 @@
 :root{
     --main-color: #5960D8;
-    --theme-color: #fff;
-    --theme-color-text: #2C2F33;
-    --theme-color-t50: #ffffff80;
+    --theme-color: #2C2F33;
+    --theme-color-text: #fff;
+    --theme-color-t50: #00000080;
 }
 
 body{
     margin: 0;
+    background-color: var(--theme-color);
     font-family: source-han-sans-japanese,sans-serif;
     font-weight: 300;
     font-style: normal;

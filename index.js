@@ -1,27 +1,27 @@
 !function (e) { var t, a = { kitId: "yth3ggq", scriptTimeout: 3e3, async: !0 }, c = e.documentElement, i = setTimeout(function () { c.className = c.className.replace(/\bwf-loading\b/g, "") + " wf-inactive" }, a.scriptTimeout), n = e.createElement("script"), s = !1, o = e.getElementsByTagName("script")[0]; c.className += " wf-loading", n.src = "https://use.typekit.net/" + a.kitId + ".js", n.async = !0, n.onload = n.onreadystatechange = function () { if (t = this.readyState, !(s || t && "complete" != t && "loaded" != t)) { s = !0, clearTimeout(i); try { Typekit.load(a) } catch (e) { } } }, o.parentNode.insertBefore(n, o) }(document);
 
-var theme = "light";
+var theme = "dark";
 $(function () {
-    function theme_change(dark) {
-        if (dark) {
-            $(":root").css("--theme-color", "#2C2F33")
-                .css("--theme-color-text", "#fff")
-                .css("--theme-color-t50", "#00000080");
-            theme = "dark";
+    function theme_change(light) {
+        if (light) {
+            $(":root").css("--theme-color", "#fff")
+                .css("--theme-color-text", "#2C2F33")
+                .css("--theme-color-t50", "#ffffff80");
+            theme = "light";
         };
     };
     if (localStorage["theme"] == null || localStorage["theme"] == "system") {
-        theme_change(matchMedia("(prefers-color-scheme: dark)").matches);
-    } else if (localStorage["theme"] == "dark") {
+        theme_change(!matchMedia("(prefers-color-scheme: dark)").matches);
+    } else if (localStorage["theme"] == "light") {
         theme_change(true);
     };
 });
 
 $(function () {
-    if (theme == "light") {
-        var color = ["#fff", "#2C2F33", "darker"];
-    } else {
+    if (theme == "dark") {
         var color = ["#2C2F33", "#000", "lighter"];
+    } else {
+        var color = ["#fff", "#2C2F33", "darker"];
     };
     bubbly({
         blur: 15,
@@ -71,7 +71,7 @@ $(function () {
 });
 
 $(function () {
-    $("html, body").animate({ scrollTop: 0 }, 0);
+    $("html,body").animate({ scrollTop: 0 }, "fast");
     $("body").mousewheel(function (event) {
         console.log(event.deltaX, event.deltaY, event.deltaFactor, $(window).scrollTop())
         if (Math.round($(window).height()) == Math.round($(".content").offset().top) && event.deltaY < 0) {
