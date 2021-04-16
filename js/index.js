@@ -5,8 +5,9 @@ $(function () {
     function theme_change(light) {
         if (light) {
             $(":root").css("--theme-color", "#fff")
+                .css("--theme-color-t50", "#ffffff80")
                 .css("--theme-color-text", "#2C2F33")
-                .css("--theme-color-t50", "#ffffff80");
+                .css("--theme-color-text-t50", "#2C2F3380");
             theme = "light";
         };
     };
@@ -71,17 +72,28 @@ $(function () {
 });
 
 $(function () {
-    $("html,body").animate({ scrollTop: 0 }, "fast");
-    $("body").mousewheel(function (event) {
-        console.log(event.deltaX, event.deltaY, event.deltaFactor, $(window).scrollTop())
-        if (Math.round($(window).height()) == Math.round($(".content").offset().top) && event.deltaY < 0) {
-            $(".content").animate({
-                "margin-top": "-100vh"
-            }, "slow", "swing");
-        } else if ($(".content").offset().top == 0 && event.deltaY > 0) {
-            $(".content").animate({
-                "margin-top": "0"
-            }, "slow", "swing");
-        };
+    if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        var theme_system = "ダーク";
+    } else {
+        var theme_system = "ライト";
+    };
+    $(".footer-theme-btn2-grid[value='system']").text(`システムと同期 (${theme_system})`);
+    if (localStorage["theme"] == null || localStorage["theme"] == "system") {
+        var theme2 = "system"
+    } else {
+        var theme2 = theme;
+    };
+    $(`.footer-theme-${theme2}`).addClass("footer-theme-btn2-select");
+    $(".footer-theme-btn").click(function () {
+        $("body").css("overflow", "hidden");
+        $(".footer-theme").css("display", "block");
+    });
+    $(".footer-theme-close").click(function () {
+        $(".footer-theme").css("display", "none");
+        $("body").css("overflow", "visible");
+    });
+    $(".footer-theme-btn2").click(function () {
+        localStorage["theme"] = $(this).attr("value");
+        location.reload();
     });
 });
