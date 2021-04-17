@@ -1,5 +1,12 @@
 !function (e) { var t, a = { kitId: "yth3ggq", scriptTimeout: 3e3, async: !0 }, c = e.documentElement, i = setTimeout(function () { c.className = c.className.replace(/\bwf-loading\b/g, "") + " wf-inactive" }, a.scriptTimeout), n = e.createElement("script"), s = !1, o = e.getElementsByTagName("script")[0]; c.className += " wf-loading", n.src = "https://use.typekit.net/" + a.kitId + ".js", n.async = !0, n.onload = n.onreadystatechange = function () { if (t = this.readyState, !(s || t && "complete" != t && "loaded" != t)) { s = !0, clearTimeout(i); try { Typekit.load(a) } catch (e) { } } }, o.parentNode.insertBefore(n, o) }(document);
 
+var parameters = {};
+var parameter_url = location.search.substring(1).split("&");
+for (par in parameter_url) {
+    var par2 = parameter_url[par].split("=");
+    parameters[par2[0]] = par2[1];
+};
+
 var theme = "dark";
 $(function () {
     function theme_change(light) {
@@ -11,6 +18,9 @@ $(function () {
             theme = "light";
         };
     };
+    if ("theme" in parameters) {
+        localStorage["theme"] = parameters["theme"];
+    };
     if (localStorage["theme"] == null || localStorage["theme"] == "system") {
         theme_change(!matchMedia("(prefers-color-scheme: dark)").matches);
     } else if (localStorage["theme"] == "light") {
@@ -19,10 +29,10 @@ $(function () {
 });
 
 $(function () {
-    if (theme == "dark") {
-        var color = ["#2C2F33", "#000", "lighter"];
-    } else {
+    if (theme == "light") {
         var color = ["#fff", "#2C2F33", "darker"];
+    } else {
+        var color = ["#2C2F33", "#000", "lighter"];
     };
     bubbly({
         blur: 15,
