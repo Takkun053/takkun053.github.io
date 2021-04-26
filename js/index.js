@@ -87,13 +87,13 @@ $(function () {
     } else {
         var theme_system = "ライト";
     };
-    $(".footer-theme-btn2-grid[value='system']").text(`システムと同期 (${theme_system})`);
+    $(".footer-theme-system").html(`<div class="btn-grid" value="system">システムと同期 (${theme_system})</div>`);
     if (localStorage["theme"] == null || localStorage["theme"] == "system") {
         var theme2 = "system"
     } else {
         var theme2 = theme;
     };
-    $(`.footer-theme-${theme2}`).addClass("footer-theme-btn2-select");
+    $(`.footer-theme-${theme2}`).addClass("btn-select");
     $(".footer-theme-btn").click(function () {
         $("body").css("overflow", "hidden");
         $(".footer-theme").css("display", "block");
@@ -102,7 +102,7 @@ $(function () {
         $(".footer-theme").css("display", "none");
         $("body").css("overflow", "visible");
     });
-    $(".footer-theme-btn2").click(function () {
+    $(".footer-theme-content>.btn").click(function () {
         localStorage["theme"] = $(this).attr("value");
         location.reload();
     });
