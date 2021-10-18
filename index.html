@@ -2,81 +2,331 @@
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takkun053 | 猫耳が生えた学生プログラマー</title>
     <meta name="description" content="猫耳が生えた学生プログラマー">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@takkun053">
     <meta property="og:url" content="https://takkun053.tk/">
     <meta property="og:title" content="Takkun053">
     <meta property="og:description" content="猫耳が生えた学生プログラマー">
-    <meta property="og:image" content="https://takkun053.tk/img/icon.png">
-    <meta name="theme-color" content="#5960D8">
-    <link rel="icon" href="img/favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/96cea6d41b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    <meta property="og:image" content="https://takkun053.tk/img/background.png">
+    <meta name="theme-color" content="#5061bf">
+    <link rel="icon" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210029320-3"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
-    <div class="top">
-        <div class="top-text">
-            <img src="img/icon.png" width="250" height="250">
-            <h1></h1>
-            <p></p>
+    <header>
+        <a href="https://takkun053.tk/" class="logo">
+            Takkun053
+        </a>
+        <div class="menu">
+            <a href="#about">
+                About
+            </a>
+            <a href="#skills">
+                Skills
+            </a>
+            <a href="#works">
+                Works
+            </a>
+            <a href="#contact">
+                Contact
+            </a>
         </div>
-        <div class="top-scroll">
-            <i class="fas fa-angle-double-down"></i>
-            Scroll
-        </div>
+        <div class="btn material-icons">menu</div>
+    </header>
+    <div id="top">
+        <h1>Takkun053 | 猫耳が生えた学生プログラマー</h1>
+        <div class="line"></div>
     </div>
-    <div class="main">
-        <header>
-            <div class="header-logo">
-                Takkun053
+    <main>
+        <h1 id="about">About</h1>
+        <div class="about-me">
+            <div class="icon">
+                <img src="./img/icon.png">
+                <div class="status" data-status="Discord Status: offline"></div>
             </div>
-        </header>
-        <div class="content">
-            <div class="profile">
-                Hello World!
+            <div>
+                <p>千葉県に住んでいるそこそこプログラミングができる学生プログラマー。</p>
+                <p>日々、好きなこと・新しいことに挑戦しています。</p>
+                <p>プログラミング以外では数学ができます(たぶん)。</p>
+                <p>
+                    <i>The icon was made by <a href="https://scratch.mit.edu/projects/376245953/"
+                            target="_blank">きゅーさん's icon maker</a>.</i>
+                </p>
             </div>
         </div>
-        <footer>
-            <div class="footer-c">
-                Copyright © 2020-2021 Takkun053. All Rights Reserved.
-            </div>
-            <i class="fas fa-adjust footer-theme-btn" title="テーマを変更"></i>
-            <div class="footer-theme">
-                <div class="footer-theme2">
-                    <div class="footer-theme-content">
-                        <i class="fas fa-times footer-theme-close" title="閉じる"></i>
-                        <div class="footer-theme-description">
-                            このサイト内で使いたいテーマを選んでください
-                        </div>
-                        <div class="btn footer-theme-system" value="system">
-                            <div class="btn-grid" value="system">
-                                システムと同期 (ダーク)
-                            </div>
-                        </div>
-                        <div class="btn footer-theme-dark" value="dark">
-                            <div class="btn-grid" value="dark">
-                                ダークテーマ
-                            </div>
-                        </div>
-                        <div class="btn footer-theme-light" value="light">
-                            <div class="btn-grid" value="light">
-                                ライトテーマ
-                            </div>
+        <h2>Accounts</h2>
+        <p>現在よく使用しているアカウントです。</p>
+        <div class="accounts">
+            <a href="https://scratch.mit.edu/users/takkun0530/" target="_blank" class="item a1">
+                <h3>Scratch</h3>
+            </a>
+            <a href="https://discord.com/users/667319675176091659/" target="_blank" class="item a2">
+                <h3>Discord</h3>
+            </a>
+            <a href="https://twitter.com/Takkun053" target="_blank" class="item a3">
+                <h3>Twitter</h3>
+            </a>
+            <a href="https://github.com/Takkun053" target="_blank" class="item a4">
+                <h3>GitHub</h3>
+            </a>
+            <a href="https://qiita.com/Takkun053" target="_blank" class="item a5">
+                <h3>Qiita</h3>
+            </a>
+        </div>
+        <h1 id="skills">Skills</h1>
+        <p>最近は簡単に書ける言語を中心に触っています()</p>
+        <div class="skills">
+            <div class="item s1">
+                <a href="#s1">
+                    <h3>Scratch</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>Scratch</h1>
+                        <p>僕がプログラミングを始めたきっかけです。</p>
+                        <p>クラウド変数を使ったチャットシステムなどを作りました(非公開です)</p>
+                        <p>3Dやペンを使ったプロジェクトは作れません()</p>
+                        <p>Scratchの限界や処理の重さなどから最近は使用していません。</p>
+                        <div class="footer">
+                            <img src="./img/scratch.png">
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="item s2">
+                <a href="#s2">
+                    <h3>HTML / CSS / JavaScript</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>HTML / CSS / JavaScript</h1>
+                        <p>他のScratcherさん達がWebページを作っていたのでやってみたやつです。</p>
+                        <p>最初に比べればかなり上達しました。</p>
+                        <p>まだまだ知らないこともたくさんあるので勉強していきます。</p>
+                        <p>いつかかっこいいサイトを作れるようになりたいです。</p>
+                        <div class="footer">
+                            <img src="./img/html_css_js.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item s3">
+                <a href="#s3">
+                    <h3>Python</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>Python</h1>
+                        <p>最近、最もよく使っている言語です。</p>
+                        <p>簡単にプログラムを書けるところが気に入っています。</p>
+                        <p>コマンドラインツールからウェブアプリケーションまで、ほとんどのことができます。</p>
+                        <p>discord.pyでDiscordBotを作ったり、FlaskでWebアプリを作ったりしたことがあります。</p>
+                        <div class="footer">
+                            <img src="./img/python.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item s4">
+                <a href="#s4">
+                    <h3>Node.js</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>Node.js</h1>
+                        <p>Pythonの次によく使う言語です。</p>
+                        <p>と言ってもPythonでほとんどのことができてしまうのでほとんど使いません。</p>
+                        <p>discord.jsやソフトウェア開発にElectronを使ったことがあります。</p>
+                        <p>まだまだ勉強中です。</p>
+                        <div class="footer">
+                            <img src="./img/nodejs.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item s5">
+                <a href="#s5">
+                    <h3>C / C++</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>C / C++</h1>
+                        <p>できるかどうか際どい言語です()</p>
+                        <p>高速に処理したい時に使いました。</p>
+                        <p>でもあんまり理解ができていません()</p>
+                        <p>将来的には書けるようになりたいなと思っています。</p>
+                        <div class="footer">
+                            <img src="./img/c_c++.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item s6">
+                <a href="#s6">
+                    <h3>Go</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>Go</h1>
+                        <p>あまり使いはしませんが理解はしているつもりです()</p>
+                        <p>書き方が複雑でないのでCやC++の代わりに使ったことがあります。</p>
+                        <p>将来的にはGoでウェブアプリケーションを作ってみたいなと思っています。</p>
+                        <p>(でも、案が浮かびません。誰かアイディアをくれ～(()</p>
+                        <div class="footer">
+                            <img src="./img/go.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="works">Works</h1>
+        <p>DiscordBotやホームページの作成を中心に開発しています。</p>
+        <div class="works">
+            <div class="item w1">
+                <a href="#w1">
+                    <h3>My portfolio</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>My portfolio</h1>
+                        <p>このポートフォリオです。</p>
+                        <p>何度か作り直しているので、5作品目(?)だと思います()</p>
+                        <p>今回は最後まで作りきることができたし、納得のいくものが作れたのでよかったです。</p>
+                        <p>(最後まで作らずに途中で諦めた物がいくつかあります(()</p>
+                        <p><a href="https://github.com/Takkun053/takkun053.github.io" target="_blank">GitHub</a></p>
+                        <div class="footer">
+                            <img src="./img/noimage.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item w2">
+                <a href="#w2">
+                    <h3>google-translate.py</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>google-translate.py</h1>
+                        <p>GASのAPIを使って簡単な翻訳ライブラリーを作りました。</p>
+                        <p>作りはマジで簡単です()</p>
+                        <p>対応に時間がかかるので、GASを通さずに翻訳できるようにしようかなと思っています。</p>
+                        <p>(一時RTでも使っていました)</p>
+                        <p>
+                            <a href="https://pypi.org/project/google-translate.py/" target="_blank">PyPI</a>
+                            ・
+                            <a href="https://github.com/Takkun053/google-translate.py" target="_blank">GitHub</a>
+                        </p>
+                        <div class="footer">
+                            <img src="./img/translate.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item w3">
+                <a href="#w3">
+                    <h3>TakuTukirou - DiscordBot</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>TakuTukirou - DiscordBot</h1>
+                        <p>T-takuさんのDiscordBot。</p>
+                        <p>僕にとって初めてのチーム開発でした。</p>
+                        <p>サイトの作成をしたんですけど、デザインが...(以下略)</p>
+                        <p>プログラムは作ってません。</p>
+                        <p>
+                            <a href="https://discord.gg/gU8cq3X" target="_blank">サポートサーバー</a>
+                            ・
+                            <a href="https://discord.com/oauth2/authorize?client_id=476012428170362880&permissions=775286087&scope=bot"
+                                target="_blank">招待URL</a>
+                        </p>
+                        <div class="footer">
+                            <img src="./img/takutuki.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item w4">
+                <a href="#w4">
+                    <h3>RT - DiscordBot</h3>
+                </a>
+                <div class="popup">
+                    <div class="content">
+                        <div class="btn material-icons">close</div>
+                        <h1>RT - DiscordBot</h1>
+                        <p>RT Teamが開発しているDiscordBot。</p>
+                        <p>最初は小さなBotだったけれど、今では100サーバーを超えています！</p>
+                        <p>プログラムを書いたけれど、書き直し時に書き直された可能性大です()</p>
+                        <p>ホームページは全て僕が作りました(実はまだ未完成です(()</p>
+                        <p>
+                            <a href="https://rt-bot.com/" target="_blank">公式サイト</a>
+                            ・
+                            <a href="https://discord.gg/ugMGw5w" target="_blank">サポートサーバー</a>
+                            ・
+                            <a href="https://discord.com/api/oauth2/authorize?client_id=716496407212589087&permissions=8&redirect_uri=https%3A%2F%2Frt-bot.com&response_type=code&scope=bot%20applications.commands"
+                                target="_blank">招待URL</a>
+                        </p>
+                        <div class="footer">
+                            <img src="./img/rt.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="contact">Contact</h1>
+        <p>連絡・質問等は、DiscordまたはTwitterのDMまでお願いします。</p>
+        <div class="contact">
+            <a href="https://discord.com/users/667319675176091659/" target="_blank" class="item c1">
+                <h3>
+                    Discord
+                </h3>
+            </a>
+            <a href="https://twitter.com/messages/compose?recipient_id=1217401290155687936&ref_src=twsrc%5Etfw"
+                target="_blank" class="item c2">
+                <h3>
+                    Twitter
+                </h3>
+            </a>
+        </div>
+    </main>
+    <footer>Copyright © 2020-2021 Takkun053. All Rights Reserved.</footer>
+    <a href="#top" class="go_to_top material-icons">expand_less</a>
+    <noscript>
+        <div class="message">
+            <div class="material-icons">warning</div>JavaScriptが無効になっているため、一部コンテンツの表示ができません。
+        </div>
+    </noscript>
+    <div class="message ie">
+        <div class="content">
+            <div class="material-icons">warning</div>お使いのブラウザーでは、一部コンテンツの表示ができません。
+        </div>
+        <div class="btn material-icons">close</div>
     </div>
+    <canvas class="background"></canvas>
+    <!--  _______    _    _                 ___  _____ ____   -->
+    <!-- |__   __|  | |  | |               / _ \| ____|___ \  -->
+    <!--    | | __ _| | _| | ___   _ _ __ | | | | |__   __) | -->
+    <!--    | |/ _` | |/ / |/ / | | | '_ \| | | |___ \ |__ <  -->
+    <!--    | | (_| |   <|   <| |_| | | | | |_| |___) |___) | -->
+    <!--    |_|\__,_|_|\_\_|\_\\__,_|_| |_|\___/|____/|____/  -->
 </body>
 
 </html>
