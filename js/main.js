@@ -148,16 +148,10 @@ onload = function () {
 
     const xhr = new XMLHttpRequest()
     xhr.onload = function () {
-        const response = JSON.parse(xhr.response)
-        for (let i in response.members) {
-            const member = response.members[i]
-            if (member.username == "Takkun") {
-                status.classList.add(member.status)
-                status.setAttribute("data-status", "Discord Status: {}".replace("{}", member.status))
-            }
-        }
+        status.classList.add(xhr.response)
+        status.setAttribute("data-status", "Discord Status: {}".replace("{}", xhr.response))
     }
-    xhr.open("GET", "https://discord.com/api/guilds/748138206293262386/widget.json")
+    xhr.open("GET", "https://takkun.tera-server.net/portfolio.php")
     xhr.send()
 
     if (ie != 0 && !localStorage.ie) {
